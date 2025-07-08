@@ -1,43 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receitas Exóticas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Receitas Exóticas</div>
-        <button class="hamburger" onclick="toggleMenu()">Receitas</button>
-        <div class="nav-menu" id="navMenu">
-            <button class="nav-item" onclick="showSection('salgadas')">Comidas Salgadas</button>
-            <button class="nav-item" onclick="showSection('doces')">Comidas Doces</button>
+        <div class="container">
+            <div class="logo">
+                <h1>Receitas Exóticas</h1>
+                <p>Explore sabores únicos do mundo!</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#salgadas">Comidas Salgadas</a></li>
+                    <li><a href="#doces">Comidas Doces</a></li>
+                    <li><a href="#finalizacao">Finalização</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <section id="inicio" class="content-section">
-        <h1>Bem-vindo ao site de Receitas Exóticas!</h1>
-        <p>Explore receitas únicas de diferentes partes do mundo!</p>
-    </section>
-
-    <section id="salgadas" class="content-section" style="display:none;">
-        <h2>Comidas Salgadas</h2>
-        <p>Aqui você encontra receitas salgadas exóticas e saborosas!</p>
-    </section>
-
-    <section id="doces" class="content-section" style="display:none;">
-        <h2>Comidas Doces</h2>
-        <p>Descubra doces deliciosos e únicos!</p>
-    </section>
-
-    <section id="finalizacao" class="content-section" style="display:none;">
-        <h2>Finalização</h2>
-        <p>Obrigado por visitar nosso site! Esperamos que tenha se divertido.</p>
-    </section>
-
+    <main>
+        <section id="inicio" class="section inicio">
+            <div class="container">
+                <h2>Bem-vindo ao Mundo das Receitas Exóticas!</h2>
+                <p>Explore receitas deliciosas e inusitadas de diferentes partes do planeta. Descubra o prazer de
+                    experimentar novos sabores e texturas!</p>
+            </div>
+        </section>
+        <section id="salgadas" class="section salgadas">
+            <div class="container">
+                <h2>Comidas Salgadas</h2>
+                <p>Aqui você encontra uma seleção de pratos salgados exóticos, preparados com ingredientes únicos e
+                    sabores incríveis.</p>
+                <ul>
+                    <li><strong>Frango Frito com Molho de Tamarindo (Tailândia)</strong> - Uma explosão de sabores
+                        agridoce e crocância.</li>
+                    <li><strong>Feijão Preto com Carne de Javali (Brasil)</strong> - Uma receita rústica e saborosa da
+                        culinária brasileira.</li>
+                    <li><strong>Polvo Grelhado com Molho de Limão e Alho (Grécia)</strong> - Suculento polvo grelhado
+                        com um toque mediterrâneo.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="doces" class="section doces">
+            <div class="container">
+                <h2>Comidas Doces</h2>
+                <p>Desfrute das sobremesas mais exóticas e irresistíveis do mundo, com sabores que você nunca imaginou!
+                </p>
+                <ul>
+                    <li><strong>Torta de Maracuja com Coco (Indonésia)</strong> - Uma combinação perfeita de acidez e
+                        cremosidade.</li>
+                    <li><strong>Gulab Jamun (Índia)</strong> - Bolinhos doces, fritos e embebidos em calda de açúcar.
+                    </li>
+                    <li><strong>Rabanada de Leite Condensado (Japão)</strong> - Uma variação da rabanada, super doce e
+                        macia.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="finalizacao" class="section finalizacao">
+            <div class="container">
+                <h2>Obrigado pela visita!</h2>
+                <p>Esperamos que você tenha se inspirado para criar novas receitas e experimentar pratos exóticos. Até a
+                    próxima!</p>
+            </div>
+        </section>
+    </main>
     <footer>
-        <button onclick="showSection('inicio')">Voltar ao Início</button>
-        <button onclick="showSection('finalizacao')">Ir para Finalização</button>
+        <div class="container">
+            <p>&copy; 2025 Receitas Exóticas | Todos os direitos reservados</p>
+        </div>
     </footer>
+
 </body>
+
 </html>
