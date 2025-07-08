@@ -1,33 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comida Exóticas</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Receitas Exóticas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header id="Inicio">
-        <div class="menu">
-            <button class="botaodis" onclick="toggleMenu()">Receitas</button>
-            <nav class="lista" id="menuLista" style="display: none;">
-                <a href="">Salgadas</a>
-                <a href="">Doce</a>
-            </nav>
+
+    <header>
+        <div class="logo">Receitas Exóticas</div>
+        <button class="hamburger" onclick="toggleMenu()">Receitas</button>
+        <div class="nav-menu" id="navMenu">
+            <button class="nav-item" onclick="showSection('salgadas')">Comidas Salgadas</button>
+            <button class="nav-item" onclick="showSection('doces')">Comidas Doces</button>
         </div>
-        <ul> 
-            <li><a href="">Descrição</a></li>
-        </ul>
-        <a href="#inicio"><i class="fa-solid fa-house"></i></a>
     </header>
+
+    <section id="inicio" class="content-section">
+        <h1>Bem-vindo ao site de Receitas Exóticas!</h1>
+        <p>Explore receitas únicas de diferentes partes do mundo!</p>
+    </section>
+
+    <section id="salgadas" class="content-section" style="display:none;">
+        <h2>Comidas Salgadas</h2>
+        <p>Aqui você encontra receitas salgadas exóticas e saborosas!</p>
+    </section>
+
+    <section id="doces" class="content-section" style="display:none;">
+        <h2>Comidas Doces</h2>
+        <p>Descubra doces deliciosos e únicos!</p>
+    </section>
+
+    <section id="finalizacao" class="content-section" style="display:none;">
+        <h2>Finalização</h2>
+        <p>Obrigado por visitar nosso site! Esperamos que tenha se divertido.</p>
+    </section>
+
+    <footer>
+        <button onclick="showSection('inicio')">Voltar ao Início</button>
+        <button onclick="showSection('finalizacao')">Ir para Finalização</button>
+    </footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>

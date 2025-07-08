@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button.hamburger {
+    background-color: #ff6347;
+}
+
+button.hamburger:hover {
+    background-color: #ff4500;
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    background-color: #ff6347;
+    margin-top: 5px;
+}
+
+.content-section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #ff6347;
+    text-align: center;
+    padding: 15px;
+}
+
+footer button {
+    background-color: #f4a261;
+}
+
+footer button:hover {
+    background-color: #e0763c;
+}
