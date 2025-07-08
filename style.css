@@ -6,54 +6,81 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     background-color: #f9f9f9;
     color: #333;
 }
+
 .container {
     width: 80%;
     margin: 0 auto;
     max-width: 1200px;
 }
+
 header {
-    background: #2a9d8f;
+    background-color: #2a9d8f;
     color: white;
-    padding: 30px 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header .logo h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
-header .logo p {
-    font-size: 1.1rem;
-    margin-top: 5px;
-}
-
-nav ul {
-    list-style: none;
-    text-align: right;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-left: 30px;
-}
-
-nav ul li a {
-    text-decoration: none;
+button.hamburger {
+    font-size: 1.5rem;
+    background-color: #2a9d8f;
+    border: none;
     color: white;
-    font-size: 1.2rem;
+    cursor: pointer;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
+button.hamburger:hover {
     background-color: #264653;
 }
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin: 15px 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #2a9d8f;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #f4a261;
+}
+
 .section {
     padding: 60px 0;
     background-color: #ffffff;
@@ -80,33 +107,23 @@ ul li {
 ul li strong {
     color: #e76f51;
 }
+
 footer {
     background-color: #264653;
     color: white;
     padding: 20px 0;
     text-align: center;
     font-size: 1rem;
-    position: relative;
 }
 
 footer p {
     margin: 0;
 }
+
 @media (max-width: 768px) {
-    header .logo h1 {
-        font-size: 2rem;
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .section {
-        padding: 40px 0;
+    .nav-menu {
+        top: 60px;
+        right: 10px;
+        width: 200px;
     }
 }
