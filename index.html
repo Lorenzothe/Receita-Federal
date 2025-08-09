@@ -11,51 +11,51 @@
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <h1 class="brand">Receitas &amp; Cozinha</h1>
+    <header class="cabecalho-site">
+        <div class="container conteudo-cabecalho">
+            <h1 class="marca">Receitas &amp; Cozinha</h1>
             <nav aria-label="Navegação principal">
-                <ul class="nav-list">
+                <ul class="lista-navegacao">
                     <li><a href="#">Início</a></li>
-                    <li><a href="#recipes">Receitas</a></li>
-                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#receitas">Receitas</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                 </ul>
             </nav>
         </div>
 
-        <div class="hero container">
+        <div class="destaque container">
             <h2>Encontre sua próxima refeição</h2>
             <p>Receitas testadas, instruções claras e tempo estimado de preparo.</p>
-            <form id="search-form" class="search-form" role="search" aria-label="Pesquisar receitas">
-                <label for="search" class="visually-hidden">Pesquisar receitas</label>
-                <input id="search" name="search" type="search" placeholder="Pesquisar (ex.: lasanha, frango, veg)"
+            <form id="form-pesquisa" class="formulario-pesquisa" role="search" aria-label="Pesquisar receitas">
+                <label for="pesquisa" class="visualmente-oculto">Pesquisar receitas</label>
+                <input id="pesquisa" name="pesquisa" type="search" placeholder="Pesquisar (ex.: lasanha, frango, veg)"
                     autocomplete="off">
-                <select id="filter" name="filter" aria-label="Filtrar por categoria">
-                    <option value="all">Todas</option>
-                    <option value="breakfast">Café da manhã</option>
-                    <option value="lunch">Almoço</option>
-                    <option value="dinner">Jantar</option>
-                    <option value="dessert">Sobremesa</option>
-                    <option value="vegan">Vegana</option>
+                <select id="filtro" name="filtro" aria-label="Filtrar por categoria">
+                    <option value="todas">Todas</option>
+                    <option value="cafe-manha">Café da manhã</option>
+                    <option value="almoco">Almoço</option>
+                    <option value="jantar">Jantar</option>
+                    <option value="sobremesa">Sobremesa</option>
+                    <option value="vegana">Vegana</option>
                 </select>
-                <button type="submit" class="btn">Buscar</button>
+                <button type="submit" class="botao">Buscar</button>
             </form>
         </div>
     </header>
 
     <main class="container">
-        <section id="recipes" class="recipes-section">
-            <header class="section-header">
+        <section id="receitas" class="secao-receitas">
+            <header class="cabecalho-secao">
                 <h3>Receitas em destaque</h3>
-                <p class="muted">Clique em uma receita para ver ingredientes e modo de preparo.</p>
+                <p class="suave">Clique em uma receita para ver ingredientes e modo de preparo.</p>
             </header>
 
-            <div class="recipes-grid" id="recipes-grid">
-                <article class="card recipe-card" data-category="dinner" tabindex="0">
+            <div class="grade-receitas" id="grade-receitas">
+                <article class="cartao cartao-receita" data-category="jantar" tabindex="0">
                     <img src="https://source.unsplash.com/600x400/?pasta" alt="Prato de massa com molho vermelho"
-                        class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Penne ao Molho de Tomate e Manjericão</h4>
+                        class="imagem-cartao">
+                    <div class="corpo-cartao">
+                        <h4 class="titulo-cartao">Penne ao Molho de Tomate e Manjericão</h4>
                         <p class="meta">30 min • Fácil • 4 porções</p>
                         <details>
                             <summary>Ingredientes</summary>
@@ -75,18 +75,18 @@
                                 <li>Misture a massa ao molho e finalize com manjericão.</li>
                             </ol>
                         </details>
-                        <div class="card-actions">
-                            <button class="btn btn-ghost" aria-label="Imprimir receita">Imprimir</button>
-                            <button class="btn btn-ghost">Salvar</button>
+                        <div class="acoes-cartao">
+                            <button class="botao botao-transparente" aria-label="Imprimir receita">Imprimir</button>
+                            <button class="botao botao-transparente">Salvar</button>
                         </div>
                     </div>
                 </article>
 
-                <article class="card recipe-card" data-category="dessert" tabindex="0">
+                <article class="cartao cartao-receita" data-category="sobremesa" tabindex="0">
                     <img src="https://source.unsplash.com/600x400/?cake" alt="Fatia de bolo com cobertura"
-                        class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Bolo de Limoncello Simples</h4>
+                        class="imagem-cartao">
+                    <div class="corpo-cartao">
+                        <h4 class="titulo-cartao">Bolo de Limoncello Simples</h4>
                         <p class="meta">1h • Médio • 8 porções</p>
                         <details>
                             <summary>Ingredientes</summary>
@@ -105,17 +105,18 @@
                                 <li>Asse em forma untada 180°C por 35–40 min.</li>
                             </ol>
                         </details>
-                        <div class="card-actions">
-                            <button class="btn btn-ghost">Imprimir</button>
-                            <button class="btn btn-ghost">Salvar</button>
+                        <div class="acoes-cartao">
+                            <button class="botao botao-transparente">Imprimir</button>
+                            <button class="botao botao-transparente">Salvar</button>
                         </div>
                     </div>
                 </article>
-                <article class="card recipe-card" data-category="vegan" tabindex="0">
+
+                <article class="cartao cartao-receita" data-category="vegana" tabindex="0">
                     <img src="https://source.unsplash.com/600x400/?salad" alt="Tigela de salada colorida"
-                        class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Bowl Vegano de Quinoa</h4>
+                        class="imagem-cartao">
+                    <div class="corpo-cartao">
+                        <h4 class="titulo-cartao">Bowl Vegano de Quinoa</h4>
                         <p class="meta">25 min • Fácil • 2 porções</p>
                         <details>
                             <summary>Ingredientes</summary>
@@ -133,23 +134,23 @@
                                 <li>Misture os vegetais e tempere a gosto.</li>
                             </ol>
                         </details>
-                        <div class="card-actions">
-                            <button class="btn btn-ghost">Imprimir</button>
-                            <button class="btn btn-ghost">Salvar</button>
+                        <div class="acoes-cartao">
+                            <button class="botao botao-transparente">Imprimir</button>
+                            <button class="botao botao-transparente">Salvar</button>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <aside class="sidebar">
-            <section id="about">
+        <aside class="barra-lateral">
+            <section id="sobre">
                 <h4>Sobre</h4>
-                <p class="muted">Este site é um template responsivo de receitas — leve, acessível e fácil de customizar.
+                <p class="suave">Este site é um template responsivo de receitas — leve, acessível e fácil de customizar.
                 </p>
             </section>
 
-            <section class="tips">
+            <section class="dicas">
                 <h4>Dicas rápidas</h4>
                 <ul>
                     <li>Mise en place: deixe tudo pronto antes de começar.</li>
@@ -160,9 +161,9 @@
         </aside>
     </main>
 
-    <footer class="site-footer">
+    <footer class="rodape-site">
         <div class="container">
-            <p>© <span id="year">2025</span> Receitas &amp; Cozinha — Feito com ❤️</p>
+            <p>© <span id="ano">2025</span> Receitas &amp; Cozinha — Feito com ❤️</p>
         </div>
     </footer>
     <script src="script.js"></script>
