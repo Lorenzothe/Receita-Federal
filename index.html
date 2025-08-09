@@ -1,78 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas Exóticas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Receitas & Cozinha — Receitas fáceis e saborosas</title>
+    <meta name="description"
+        content="Coleção de receitas organizadas em cartões, com busca, filtros e modo de impressão. HTML semântico e CSS separado.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Receitas Exóticas</h1>
-                <p>Explore sabores únicos do mundo!</p>
-            </div>
-            <button class="hamburger" onclick="toggleMenu()">Receitas</button>
-            <div class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="#salgadas">Comidas Salgadas</a></li>
-                    <li><a href="#doces">Comidas Doces</a></li>
-                </ul>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#finalizacao">Finalização</a></li>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="brand">Receitas &amp; Cozinha</h1>
+            <nav aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#recipes">Receitas</a></li>
+                    <li><a href="#about">Sobre</a></li>
                 </ul>
             </nav>
         </div>
+
+        <div class="hero container">
+            <h2>Encontre sua próxima refeição</h2>
+            <p>Receitas testadas, instruções claras e tempo estimado de preparo.</p>
+            <form id="search-form" class="search-form" role="search" aria-label="Pesquisar receitas">
+                <label for="search" class="visually-hidden">Pesquisar receitas</label>
+                <input id="search" name="search" type="search" placeholder="Pesquisar (ex.: lasanha, frango, veg)"
+                    autocomplete="off">
+                <select id="filter" name="filter" aria-label="Filtrar por categoria">
+                    <option value="all">Todas</option>
+                    <option value="breakfast">Café da manhã</option>
+                    <option value="lunch">Almoço</option>
+                    <option value="dinner">Jantar</option>
+                    <option value="dessert">Sobremesa</option>
+                    <option value="vegan">Vegana</option>
+                </select>
+                <button type="submit" class="btn">Buscar</button>
+            </form>
+        </div>
     </header>
-    <main>
-        <section id="inicio" class="section inicio">
-            <div class="container">
-                <h2>Bem-vindo ao Mundo das Receitas Exóticas!</h2>
-                <p>Explore receitas deliciosas e inusitadas de diferentes partes do planeta. Descubra o prazer de
-                    experimentar novos sabores e texturas!</p>
+
+    <main class="container">
+        <section id="recipes" class="recipes-section">
+            <header class="section-header">
+                <h3>Receitas em destaque</h3>
+                <p class="muted">Clique em uma receita para ver ingredientes e modo de preparo.</p>
+            </header>
+
+            <div class="recipes-grid" id="recipes-grid">
+                <article class="card recipe-card" data-category="dinner" tabindex="0">
+                    <img src="https://source.unsplash.com/600x400/?pasta" alt="Prato de massa com molho vermelho"
+                        class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Penne ao Molho de Tomate e Manjericão</h4>
+                        <p class="meta">30 min • Fácil • 4 porções</p>
+                        <details>
+                            <summary>Ingredientes</summary>
+                            <ul>
+                                <li>350 g de penne</li>
+                                <li>400 g de tomate pelado</li>
+                                <li>2 dentes de alho</li>
+                                <li>Folhas de manjericão</li>
+                                <li>Azeite, sal e pimenta</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Modo de preparo</summary>
+                            <ol>
+                                <li>Cozinhe o penne em água salgada até ficar al dente.</li>
+                                <li>Refogue alho no azeite, junte tomates, ajuste sal e deixe reduzir 10–12 min.</li>
+                                <li>Misture a massa ao molho e finalize com manjericão.</li>
+                            </ol>
+                        </details>
+                        <div class="card-actions">
+                            <button class="btn btn-ghost" aria-label="Imprimir receita">Imprimir</button>
+                            <button class="btn btn-ghost">Salvar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card recipe-card" data-category="dessert" tabindex="0">
+                    <img src="https://source.unsplash.com/600x400/?cake" alt="Fatia de bolo com cobertura"
+                        class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Bolo de Limoncello Simples</h4>
+                        <p class="meta">1h • Médio • 8 porções</p>
+                        <details>
+                            <summary>Ingredientes</summary>
+                            <ul>
+                                <li>3 ovos</li>
+                                <li>200 g de açúcar</li>
+                                <li>200 g de farinha</li>
+                                <li>Raspas de 1 limão</li>
+                                <li>100 ml de óleo</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Modo de preparo</summary>
+                            <ol>
+                                <li>Bata ovos com açúcar, adicione óleo e raspas, peneire a farinha.</li>
+                                <li>Asse em forma untada 180°C por 35–40 min.</li>
+                            </ol>
+                        </details>
+                        <div class="card-actions">
+                            <button class="btn btn-ghost">Imprimir</button>
+                            <button class="btn btn-ghost">Salvar</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card recipe-card" data-category="vegan" tabindex="0">
+                    <img src="https://source.unsplash.com/600x400/?salad" alt="Tigela de salada colorida"
+                        class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Bowl Vegano de Quinoa</h4>
+                        <p class="meta">25 min • Fácil • 2 porções</p>
+                        <details>
+                            <summary>Ingredientes</summary>
+                            <ul>
+                                <li>1 xícara de quinoa</li>
+                                <li>1 pepino picado</li>
+                                <li>Tomate-cereja</li>
+                                <li>Azeite, limão, sal</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Modo de preparo</summary>
+                            <ol>
+                                <li>Cozinhe a quinoa em 2x água por 12 min.</li>
+                                <li>Misture os vegetais e tempere a gosto.</li>
+                            </ol>
+                        </details>
+                        <div class="card-actions">
+                            <button class="btn btn-ghost">Imprimir</button>
+                            <button class="btn btn-ghost">Salvar</button>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
-        <section id="salgadas" class="section salgadas">
-            <div class="container">
-                <h2>Comidas Salgadas</h2>
-                <p>Aqui você encontra uma seleção de pratos salgados exóticos, preparados com ingredientes únicos e
-                    sabores incríveis.</p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </section>
-        <section id="doces" class="section doces">
-            <div class="container">
-                <h2>Comidas Doces</h2>
-                <p>Desfrute das sobremesas mais exóticas e irresistíveis do mundo, com sabores que você nunca imaginou!
+
+        <aside class="sidebar">
+            <section id="about">
+                <h4>Sobre</h4>
+                <p class="muted">Este site é um template responsivo de receitas — leve, acessível e fácil de customizar.
                 </p>
+            </section>
+
+            <section class="tips">
+                <h4>Dicas rápidas</h4>
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li>Mise en place: deixe tudo pronto antes de começar.</li>
+                    <li>Prove sempre: ajuste sal e acidez no final.</li>
+                    <li>Armazene corretamente: embalagens herméticas aumentam a vida útil.</li>
                 </ul>
-            </div>
-        </section>
-        <section id="finalizacao" class="section finalizacao">
-            <div class="container">
-                <h2>Obrigado pela visita!</h2>
-                <p>Esperamos que você tenha se inspirado para criar novas receitas e experimentar pratos exóticos. Até a
-                    próxima!</p>
-            </div>
-        </section>
+            </section>
+        </aside>
     </main>
-    <footer>
+
+    <footer class="site-footer">
         <div class="container">
-            <p>2025 Receitas Exóticas | Lorenzo, Samuel e Francisco</p>
+            <p>© <span id="year">2025</span> Receitas &amp; Cozinha — Feito com ❤️</p>
         </div>
     </footer>
     <script src="script.js"></script>
+
 </body>
+
 </html>
