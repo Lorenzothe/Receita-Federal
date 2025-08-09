@@ -1,6 +1,6 @@
 :root {
-    --bg: #fbfbfb;
-    --cartao: #ffffff;
+    --bg: #E4B954;
+    --cartao: #E68607;
     --texto: #222;
     --suave: #6b6b6b;
     --destaque: #e05a47;
@@ -187,7 +187,7 @@ main {
     background: var(--cartao);
     padding: 1rem;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .rodape-site {
