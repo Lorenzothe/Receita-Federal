@@ -1,8 +1,8 @@
 :root {
     --bg: #E4B954;
     --cartao: #E68607;
-    --texto: #222;
-    --suave: #6b6b6b;
+    --texto: #000000;
+    --suave: #000000;
     --destaque: #e05a47;
     --raio: 12px;
     --gap: 1rem;
@@ -34,7 +34,7 @@ body {
 }
 
 .cabecalho-site {
-    background: linear-gradient(90deg, #fff 0%, #fffefc 100%);
+    background-color: #E68607;
     border-bottom: 1px solid #eee;
     padding-bottom: 1.25rem;
 }
@@ -194,7 +194,7 @@ main {
     border-top: 1px solid #eee;
     padding: 1rem 0;
     text-align: center;
-    background: transparent;
+    background-color: #E68607;
 }
 
 .visualmente-oculto {
